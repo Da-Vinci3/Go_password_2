@@ -1,32 +1,57 @@
-# If you prefer the allow list template instead of the deny list, see community template:
-# https://github.com/github/gitignore/blob/main/community/Golang/Go.AllowList.gitignore
-#
-# Binaries for programs and plugins
+# Password Manager v2 - .gitignore
+
+# Sensitive files - NEVER commit these
+myconfig.json
+config.json
+passwords.json
+*.json
+
+# Except go.mod and go.sum
+!go.mod
+!go.sum
+
+# Compiled binaries
+password-manager
+password-manager.exe
 *.exe
-*.exe~
-*.dll
-*.so
-*.dylib
-
-# Test binary, built with `go test -c`
-*.test
-
-# Code coverage profiles and other test artifacts
 *.out
-coverage.*
-*.coverprofile
-profile.cov
 
-# Dependency directories (remove the comment below to include it)
-# vendor/
+# Test coverage
+*.test
+*.prof
+coverage.txt
+coverage.html
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# Backup files
+*.bak
+*.backup
+*.tmp
+
+# Logs
+*.log
 
 # Go workspace file
 go.work
-go.work.sum
 
-# env file
-.env
-
-# Editor/IDE
-# .idea/
-# .vscode/
+# Temporary test files
+test_*.json
+*_test_output*
